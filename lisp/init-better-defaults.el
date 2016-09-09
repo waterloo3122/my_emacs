@@ -9,8 +9,11 @@
 					    ))
 
 (setq auto-save-default nil)
+
+;;;(setq backup-directory-alist `(("." . "~/.saves")))
 (setq make-backup-files nil)
-(setq make-backup-files nil)
+
+
 
 (require 'recentf)
 (recentf-mode 1)
@@ -72,7 +75,15 @@
   "Replace Dos eolns CR LF with Unix eolns CR"
   (interactive)
   (goto-char (point-min))
-  (while (search-forward "\r" nit t) (replace-match "")))
+  (while (search-forward "\r" nil t) (replace-match "")))
+
+;;(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+;;  "Highlight enclosing parens."
+;;  (cond ((looking-at-p "\\s(") (funcall fn))
+;;	(t (save-excursion
+;;	     (ignore-errors (backward-up-list))
+;;	     (funcall fn)))))
+
 
 
 (provide 'init-better-defaults)

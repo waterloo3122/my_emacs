@@ -16,5 +16,3 @@
 (load-file custom-file)
 
 (setq php-manual-path "~/doc/php-chunked-xhtml")
-
-

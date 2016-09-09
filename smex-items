@@ -1,16 +1,22 @@
 
 ;; ----- smex-history -----
 (
- cd
- 5x5
- arp
- dbx
- dig
- erc
- ert
+ web-mode
+ indent-region-or-buffer
+ describe-variable
+ info
+ list-packages
+ shell
+ counsel-git-grep
 )
 
 ;; ----- smex-data -----
 (
- 
+ (counsel-git-grep . 1)
+ (describe-variable . 2)
+ (shell . 1)
+ (list-packages . 1)
+ (info . 1)
+ (indent-region-or-buffer . 1)
+ (web-mode . 1)
 )
