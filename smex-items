@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ org-capture
+ count-words
+ iedit-mode
  emacs-lisp-mode
  js2-mode
  counsel-imenu
  occur-edit-mode
- occur-mode
- occur
- customize-variable
 )
 
 ;; ----- smex-data -----
@@ -30,4 +30,7 @@
  (counsel-imenu . 2)
  (js2-mode . 2)
  (emacs-lisp-mode . 1)
+ (iedit-mode . 1)
+ (count-words . 1)
+ (org-capture . 1)
 )
