@@ -1,22 +1,33 @@
 
 ;; ----- smex-history -----
 (
- web-mode
- indent-region-or-buffer
- describe-variable
- info
- list-packages
- shell
- counsel-git-grep
+ emacs-lisp-mode
+ js2-mode
+ counsel-imenu
+ occur-edit-mode
+ occur-mode
+ occur
+ customize-variable
 )
 
 ;; ----- smex-data -----
 (
  (counsel-git-grep . 1)
- (describe-variable . 2)
+ (describe-variable . 3)
  (shell . 1)
  (list-packages . 1)
  (info . 1)
  (indent-region-or-buffer . 1)
  (web-mode . 1)
+ (my-toggle-web-indent . 5)
+ (remove-dos-eol . 1)
+ (customize . 1)
+ (customize-group . 1)
+ (customize-variable . 1)
+ (occur-mode . 2)
+ (occur . 1)
+ (occur-edit-mode . 1)
+ (counsel-imenu . 2)
+ (js2-mode . 2)
+ (emacs-lisp-mode . 1)
 )
