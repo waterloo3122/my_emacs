@@ -23,6 +23,9 @@
 		      expand-region
 		      iedit
 		      org-pomodoro
+		      helm-ag
+		      auto-yasnippet
+		      evil
 		      ) "Default packages")
 
 (defun pp/packages-installed-p ()
@@ -45,6 +48,7 @@
 ;;;(require 'smartparens-config)
 (smartparens-global-mode t)
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
 
 ;; config for js files
 (setq auto-mode-alist
@@ -82,6 +86,7 @@
 (require 'nodejs-repl)
 
 (global-flycheck-mode)
+;;(add-hook 'js2-mode-hook 'flycheck-mode)
 
 ;;;config for web mode
 (defun my-web-mode-indent-setup ()
@@ -143,6 +148,12 @@
 (global-set-key (kbd "M-=") 'er/expand-region)
 
 (global-set-key (kbd "M-s e") 'iedit-mode)
+
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+
 
 
 (provide 'init-packages)

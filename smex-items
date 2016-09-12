@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ flycheck-list-errors
+ flycheck-mode
+ helm-do-ag-project-root
+ helm-ag
+ org-pomodoro
+ customize-group
  org-capture
- count-words
- iedit-mode
- emacs-lisp-mode
- js2-mode
- counsel-imenu
- occur-edit-mode
 )
 
 ;; ----- smex-data -----
@@ -22,7 +22,7 @@
  (my-toggle-web-indent . 5)
  (remove-dos-eol . 1)
  (customize . 1)
- (customize-group . 1)
+ (customize-group . 2)
  (customize-variable . 1)
  (occur-mode . 2)
  (occur . 1)
@@ -33,4 +33,9 @@
  (iedit-mode . 1)
  (count-words . 1)
  (org-capture . 1)
+ (org-pomodoro . 2)
+ (helm-ag . 2)
+ (helm-do-ag-project-root . 1)
+ (flycheck-mode . 2)
+ (flycheck-list-errors . 1)
 )

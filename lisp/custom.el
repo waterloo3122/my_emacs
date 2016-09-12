@@ -5,6 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 1)
+ '(org-pomodoro-long-break-length 25)
+ '(package-selected-packages
+   (quote
+    (helm-ag web-mode smex smartparens popwin org-pomodoro nodejs-repl monokai-theme js2-refactor iedit hungry-delete flycheck expand-region counsel company ac-php)))
  '(web-mode-enable-auto-closing t)
  '(web-mode-enable-auto-expanding t)
  '(web-mode-enable-auto-indentation t)
