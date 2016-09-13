@@ -26,6 +26,8 @@
 		      helm-ag
 		      auto-yasnippet
 		      evil
+		      switch-window
+		      window-numbering
 		      ) "Default packages")
 
 (defun pp/packages-installed-p ()
@@ -145,7 +147,7 @@
 (global-set-key (kbd "M-s i") 'counsel-imenu)
 
 ;;;config expand region
-(global-set-key (kbd "M-=") 'er/expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 (global-set-key (kbd "M-s e") 'iedit-mode)
 
@@ -153,7 +155,14 @@
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
+;;;config switch-windwo
+(require 'switch-window)
+(global-set-key (kbd "C-x o") 'switch-window)
 
+;;;set window-numbering
+(window-numbering-mode)
+(setq window-numbering-assign-func
+      (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
 
 
 (provide 'init-packages)

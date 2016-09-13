@@ -5,6 +5,6 @@
 (("org-capture-last-stored"
  (filename . "~/.emacs.d/gtd.org")
  (front-context-string . "** TODO [#B] who")
- (rear-context-string . "[#B] set emacs\n\n")
- (position . 223))
+ (rear-context-string . "ODO [#B] hello\n\n")
+ (position . 270))
 )

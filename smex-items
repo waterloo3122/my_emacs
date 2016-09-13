@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- flycheck-list-errors
- flycheck-mode
- helm-do-ag-project-root
- helm-ag
+ list-buffers
+ window-numbering-mode
+ list-packages
+ org-indent-mode
+ todo-show
  org-pomodoro
- customize-group
- org-capture
+ grep
 )
 
 ;; ----- smex-data -----
@@ -15,10 +15,10 @@
  (counsel-git-grep . 1)
  (describe-variable . 3)
  (shell . 1)
- (list-packages . 1)
+ (list-packages . 3)
  (info . 1)
  (indent-region-or-buffer . 1)
- (web-mode . 1)
+ (web-mode . 2)
  (my-toggle-web-indent . 5)
  (remove-dos-eol . 1)
  (customize . 1)
@@ -33,9 +33,16 @@
  (iedit-mode . 1)
  (count-words . 1)
  (org-capture . 1)
- (org-pomodoro . 2)
+ (org-pomodoro . 3)
  (helm-ag . 2)
  (helm-do-ag-project-root . 1)
  (flycheck-mode . 2)
  (flycheck-list-errors . 1)
+ (grep-find . 1)
+ (grep . 9)
+ (goto-line . 1)
+ (todo-show . 1)
+ (org-indent-mode . 1)
+ (window-numbering-mode . 1)
+ (list-buffers . 1)
 )

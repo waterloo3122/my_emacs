@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 1)
+ '(org-agenda-files (quote ("/home/pp/.emacs.d/gtd.org")))
  '(org-pomodoro-long-break-length 25)
  '(package-selected-packages
    (quote
