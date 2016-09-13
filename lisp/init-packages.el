@@ -28,6 +28,7 @@
 		      evil
 		      switch-window
 		      window-numbering
+		      magit
 		      ) "Default packages")
 
 (defun pp/packages-installed-p ()
@@ -164,5 +165,8 @@
 (setq window-numbering-assign-func
       (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
 
+
+;;;config magit
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (provide 'init-packages)
