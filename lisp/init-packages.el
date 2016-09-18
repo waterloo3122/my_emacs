@@ -1,54 +1,55 @@
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-	;;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-  (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
-                         ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
-  )
+;; (when (>= emacs-major-version 24)
+;;   (require 'package)
+;;   (package-initialize)
+;; 	;;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+;;   (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+;;                          ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+;;   )
 
-(require 'cl)
-(defvar pp/packages '(
-		      company
-		      monokai-theme
-		      hungry-delete
-		      swiper
-		      counsel
-		      smartparens
-		      js2-mode
-		      nodejs-repl
-		      php-mode
-		      flycheck
-		      popwin
-		      web-mode
-		      ac-php
-		      js2-refactor
-		      expand-region
-		      iedit
-		      org-pomodoro
-		      helm-ag
-		      auto-yasnippet
-		      evil
-		      switch-window
-		      window-numbering
-		      magit
-		      elfeed
-		      evil
-		      evil-leader
-		      which-key
-		      evil-nerd-commenter
-		      evil-surround
-		      ) "Default packages")
+;; (require 'cl)
+;; (defvar pp/packages '(
+;; 		      company
+;; 		      monokai-theme
+;; 		      hungry-delete
+;; 		      swiper
+;; 		      counsel
+;; 		      smartparens
+;; 		      js2-mode
+;; 		      nodejs-repl
+;; 		      php-mode
+;; 		      flycheck
+;; 		      popwin
+;; 		      web-mode
+;; 		      ac-php
+;; 		      js2-refactor
+;; 		      expand-region
+;; 		      iedit
+;; 		      org-pomodoro
+;; 		      helm-ag
+;; 		      auto-yasnippet
+;; 		      evil
+;; 		      switch-window
+;; 		      window-numbering
+;; 		      magit
+;; 		      elfeed
+;; 		      evil
+;; 		      evil-leader
+;; 		      which-key
+;; 		      evil-nerd-commenter
+;; 		      evil-surround
+;; 		      pallet
+;; 		      ) "Default packages")
 
-(defun pp/packages-installed-p ()
-  (loop for pkg in pp/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
-(unless (pp/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg pp/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
+;; (defun pp/packages-installed-p ()
+;;   (loop for pkg in pp/packages
+;; 	when (not (package-installed-p pkg)) do (return nil)
+;; 	finally (return t)))
+;; (unless (pp/packages-installed-p)
+;;   (message "%s" "Refreshing package database...")
+;;   (package-refresh-contents)
+;;   (dolist (pkg pp/packages)
+;;     (when (not (package-installed-p pkg))
+;;       (package-install pkg))))
 
 (global-hungry-delete-mode)
 

@@ -83,7 +83,11 @@
 ;;	(t (save-excursion
 ;;	     (ignore-errors (backward-up-list))
 ;;	     (funcall fn)))))
-
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     ad-do-it))))
 ;; dwin = do what i mean
 (defun occur-dwin ()
   "Call occur with a sane default"
