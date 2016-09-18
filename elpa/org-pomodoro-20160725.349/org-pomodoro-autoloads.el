@@ -1,10 +1,9 @@
 ;;; org-pomodoro-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads (org-pomodoro) "org-pomodoro" "org-pomodoro.el"
-;;;;;;  (22483 45729 456634 444000))
+;;;### (autoloads nil "org-pomodoro" "org-pomodoro.el" (0 0 0 0))
 ;;; Generated autoloads from org-pomodoro.el
 
 (autoload 'org-pomodoro "org-pomodoro" "\
@@ -16,18 +15,25 @@ kill the current timer, this may be a break or a running pomodoro.
 
 \(fn &optional ARG)" t nil)
 
-;;;***
-
-;;;### (autoloads nil nil ("org-pomodoro-pidgin.el" "org-pomodoro-pkg.el")
-;;;;;;  (22483 45729 465560 976000))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-pomodoro" '("org-pomodoro-")))
 
 ;;;***
 
-(provide 'org-pomodoro-autoloads)
+;;;### (autoloads nil "org-pomodoro-pidgin" "org-pomodoro-pidgin.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from org-pomodoro-pidgin.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-pomodoro-pidgin" '("org-pom")))
+
+;;;***
+
+;;;### (autoloads nil nil ("org-pomodoro-pkg.el") (0 0 0 0))
+
+;;;***
+
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; org-pomodoro-autoloads.el ends here

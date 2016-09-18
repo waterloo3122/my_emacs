@@ -1,10 +1,9 @@
 ;;; alert-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads (alert alert-add-rule) "alert" "alert.el" (22483
-;;;;;;  45725 616686 181000))
+;;;### (autoloads nil "alert" "alert.el" (0 0 0 0))
 ;;; Generated autoloads from alert.el
 
 (autoload 'alert-add-rule "alert" "\
@@ -83,17 +82,13 @@ Here are some more typical examples of usage:
 
 \(fn MESSAGE &key (severity (quote normal)) TITLE ICON CATEGORY BUFFER MODE DATA STYLE PERSISTENT NEVER-PERSIST)" nil nil)
 
-;;;***
-
-;;;### (autoloads nil nil ("alert-pkg.el") (22483 45725 635463 548000))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "alert" '("alert-")))
 
 ;;;***
 
-(provide 'alert-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; alert-autoloads.el ends here

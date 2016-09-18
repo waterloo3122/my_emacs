@@ -1,10 +1,9 @@
 ;;; iedit-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads (iedit-mode-toggle-on-function iedit-mode) "iedit"
-;;;;;;  "iedit.el" (22483 35702 3908 515000))
+;;;### (autoloads nil "iedit" "iedit.el" (0 0 0 0))
 ;;; Generated autoloads from iedit.el
 
 (autoload 'iedit-mode "iedit" "\
@@ -70,10 +69,18 @@ Toggle Iedit mode on current function.
 
 \(fn)" t nil)
 
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "iedit" '("iedit-")))
+
 ;;;***
 
-;;;### (autoloads (iedit-rectangle-mode) "iedit-rect" "iedit-rect.el"
-;;;;;;  (22483 35702 15908 352000))
+;;;### (autoloads nil "iedit-lib" "iedit-lib.el" (0 0 0 0))
+;;; Generated autoloads from iedit-lib.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "iedit-lib" '("iedit-")))
+
+;;;***
+
+;;;### (autoloads nil "iedit-rect" "iedit-rect.el" (0 0 0 0))
 ;;; Generated autoloads from iedit-rect.el
 
 (autoload 'iedit-rectangle-mode "iedit-rect" "\
@@ -88,18 +95,17 @@ Commands:
 
 \(fn &optional BEG END)" t nil)
 
-;;;***
-
-;;;### (autoloads nil nil ("iedit-lib.el" "iedit-pkg.el") (22483
-;;;;;;  35702 48710 472000))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "iedit-rect" '("iedit-rect")))
 
 ;;;***
 
-(provide 'iedit-autoloads)
+;;;### (autoloads nil nil ("iedit-pkg.el") (0 0 0 0))
+
+;;;***
+
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; iedit-autoloads.el ends here

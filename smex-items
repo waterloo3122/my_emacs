@@ -1,21 +1,21 @@
 
 ;; ----- smex-history -----
 (
- list-buffers
- window-numbering-mode
+ php-mode
+ byte-recompile-directory
  list-packages
- org-indent-mode
- todo-show
- org-pomodoro
- grep
+ byte-compile-file
+ shell
+ elfeed-update
+ elfeed
 )
 
 ;; ----- smex-data -----
 (
  (counsel-git-grep . 1)
  (describe-variable . 3)
- (shell . 1)
- (list-packages . 3)
+ (shell . 2)
+ (list-packages . 8)
  (info . 1)
  (indent-region-or-buffer . 1)
  (web-mode . 2)
@@ -34,7 +34,7 @@
  (count-words . 1)
  (org-capture . 1)
  (org-pomodoro . 3)
- (helm-ag . 2)
+ (helm-ag . 12)
  (helm-do-ag-project-root . 1)
  (flycheck-mode . 2)
  (flycheck-list-errors . 1)
@@ -45,4 +45,13 @@
  (org-indent-mode . 1)
  (window-numbering-mode . 1)
  (list-buffers . 1)
+ (magit-version . 1)
+ (helm-do-ag . 1)
+ (counsel-ag . 1)
+ (describe-function . 1)
+ (elfeed . 3)
+ (elfeed-update . 5)
+ (php-mode . 4)
+ (byte-compile-file . 1)
+ (byte-recompile-directory . 2)
 )

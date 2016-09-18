@@ -1,9 +1,9 @@
 ;;; xcscope-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "xcscope" "xcscope.el" (22467 60790 0 0))
+;;;### (autoloads nil "xcscope" "xcscope.el" (0 0 0 0))
 ;;; Generated autoloads from xcscope.el
 
 (autoload 'cscope-minor-mode "xcscope" "\
@@ -20,6 +20,8 @@ Automatically turns on cscope-minor-mode when editing C and
 C++ sources
 
 \(fn)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "xcscope" '("cscope-")))
 
 ;;;***
 

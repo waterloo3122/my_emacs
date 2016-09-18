@@ -29,6 +29,7 @@
 		      switch-window
 		      window-numbering
 		      magit
+		      elfeed
 		      ) "Default packages")
 
 (defun pp/packages-installed-p ()
@@ -168,6 +169,13 @@
 
 ;;;config magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;;;config elfeed
+(global-set-key (kbd "C-x w") 'elfeed)
+(setq elfeed-feeds
+      '(("http://oremacs.com/atom" blog emacs)
+	("http://pragmaticemacs.com/feed/atom/" blog emacs)
+	("http://planet.emacsen.org/atom" blog emacs)))
 
 
 (provide 'init-packages)

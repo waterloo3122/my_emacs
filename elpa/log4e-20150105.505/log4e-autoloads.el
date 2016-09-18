@@ -1,18 +1,18 @@
 ;;; log4e-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("log4e-pkg.el" "log4e.el") (22483 45723
-;;;;;;  225148 851000))
+;;;### (autoloads nil "log4e" "log4e.el" (0 0 0 0))
+;;; Generated autoloads from log4e.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "log4e" '("log4e")))
 
 ;;;***
 
-(provide 'log4e-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; log4e-autoloads.el ends here

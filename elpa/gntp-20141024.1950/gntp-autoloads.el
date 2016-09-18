@@ -1,10 +1,9 @@
 ;;; gntp-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads (gntp-notify) "gntp" "gntp.el" (22483 45723 976708
-;;;;;;  277000))
+;;;### (autoloads nil "gntp" "gntp.el" (0 0 0 0))
 ;;; Generated autoloads from gntp.el
 
 (autoload 'gntp-notify "gntp" "\
@@ -13,17 +12,13 @@ PORT defaults to `gntp-server-port'
 
 \(fn NAME TITLE TEXT SERVER &optional PORT PRIORITY ICON)" nil nil)
 
-;;;***
-
-;;;### (autoloads nil nil ("gntp-pkg.el") (22483 45723 992994 813000))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gntp" '("gntp-")))
 
 ;;;***
 
-(provide 'gntp-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; gntp-autoloads.el ends here

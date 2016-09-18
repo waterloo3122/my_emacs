@@ -4,7 +4,7 @@
 
 (defun open-my-init-file()
   (interactive)
-  (find-file "~/init.el"))
+  (find-file "~/.emacs.d/init.el"))
 
 (require 'init-packages)
 (require 'init-ui)

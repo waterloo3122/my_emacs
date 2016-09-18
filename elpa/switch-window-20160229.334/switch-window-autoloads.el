@@ -1,10 +1,9 @@
 ;;; switch-window-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "switch-window" "switch-window.el" (22487 45957
-;;;;;;  841862 593000))
+;;;### (autoloads nil "switch-window" "switch-window.el" (0 0 0 0))
 ;;; Generated autoloads from switch-window.el
 
 (autoload 'switch-window-then-delete "switch-window" "\
@@ -49,6 +48,8 @@ Select a window then split it with split-window-right's mode.
 Select a window then swap it buffer with current window's buffer.
 
 \(fn ARG)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "switch-window" '("switch-window-" "delete-other-window")))
 
 ;;;***
 
