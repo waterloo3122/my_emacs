@@ -1,7 +1,11 @@
-(package-initialize)
+;;; init --- Summary
+
+;;; code:
+(package-initialize) ;;; this is a comment
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;;; Open my init file
 (defun open-my-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
@@ -18,4 +22,4 @@
 ;;(setq php-manual-path "~/doc/php-chunked-xhtml")
 
 (my-maximized)
-
+;;; init.el ends here

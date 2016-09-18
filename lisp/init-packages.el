@@ -1,7 +1,9 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+	;;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+  (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+                         ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
   )
 
 (require 'cl)
@@ -30,6 +32,11 @@
 		      window-numbering
 		      magit
 		      elfeed
+		      evil
+		      evil-leader
+		      which-key
+		      evil-nerd-commenter
+		      evil-surround
 		      ) "Default packages")
 
 (defun pp/packages-installed-p ()
@@ -157,9 +164,9 @@
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
-;;;config switch-windwo
-(require 'switch-window)
-(global-set-key (kbd "C-x o") 'switch-window)
+;;;config switch-window
+;;;(require 'switch-window)
+;;;(global-set-key (kbd "C-x o") 'switch-window)
 
 ;;;set window-numbering
 (window-numbering-mode)
@@ -177,5 +184,63 @@
 	("http://pragmaticemacs.com/feed/atom/" blog emacs)
 	("http://planet.emacsen.org/atom" blog emacs)))
 
+
+;;; config evil
+(evil-mode t)
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+;;;(setq evil-want-C-u-scroll t)
+
+;;;config evil-leader
+(global-evil-leader-mode)
+ 
+
+(evil-leader/set-key
+ "ff" 'find-file
+ "fr" 'recentf-open-files
+ "bb" 'switch-to-buffer
+ "bk" 'kill-buffer
+ "pf" 'counsel-git
+ "ps" 'helm-do-ag-project-root
+ "1" 'select-window-1
+ "2" 'select-window-2
+ "3" 'select-window-3
+ "4" 'select-window-4
+ "0" 'select-window-0
+ "w/" 'split-window-right
+ "w-" 'split-window-below
+ ";" 'counsel-M-x
+ "wm" 'delete-other-windows
+ "qq" 'save-buffers-kill-terminal
+  )
+ 
+;;; config evil-surround
+(require 'evil-surround)
+(global-evil-surround-mode t)
+
+;;; config evil-nerd-commenter
+(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(evilnc-default-hotkeys)
+
+(dolist (mode '(ag-mode
+               flycheck-error-list-mode
+               git-rebase-mode
+               occur-mode))
+  (add-to-list 'evil-emacs-state-modes mode))
+
+(add-hook 'occur-mode-hook
+         (lambda ()
+           (evil-add-hjkl-bindings occur-mode-map 'emacs
+             (kbd "/") 'evil-search-forward
+             (kbd "n") 'evil-search-next
+             (kbd "N") 'evil-search-previous
+             (kbd "C-d") 'evil-scroll-down
+             (kbd "C-u") 'evil-scroll-up
+             )))
+
+;;; config which-key
+(which-key-mode)
+(setq which-key-side-window-location 'right)
 
 (provide 'init-packages)
